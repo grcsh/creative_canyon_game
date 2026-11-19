@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>הרפתקה בקניון היצירה - משחק רטרו</title>
+        <title>הרפתקה יצירתית בקניון - משחק רטרו</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800;900&display=swap" rel="stylesheet">
@@ -65,9 +65,9 @@
                 </div>
                 <div>
                     <h1 class="text-sm sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-l from-pink-300 via-purple-200 to-cyan-300 tracking-tight leading-tight">
-                        קניון היצירה • סטודיו
+                        הרפתקה יצירתית בקניון
                     </h1>
-                    <p id="locationSubtitle" class="text-[10px] sm:text-xs text-slate-300 truncate max-w-[165px] sm:max-w-xs">מסדרון ראשי • התקרב לדלת כדי להיכנס</p>
+                    <p id="locationSubtitle" class="text-[10px] sm:text-xs text-slate-300 truncate max-w-[165px] sm:max-w-xs">מסדרון ראשי • מתקרבים לדלת כדי להיכנס</p>
                 </div>
             </div>
 
@@ -130,27 +130,27 @@
                         🧶
                     </div>
                     <h2 class="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-l from-pink-300 via-purple-200 to-cyan-300 mb-2">
-                        קניון היצירה • סטודיו
+                        הרפתקה יצירתית בקניון
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-300 mb-5 leading-relaxed">
-                        טייל בקניון, קפוץ לאסוף חומרי יצירה, גלה חדרים נסתרים או עצב חדרים חדשים משלך!
+                        טיילו בקניון, קפצו ואספו חומרי יצירה, גלו חדרים נסתרים ועיצבו חדרים חדשים משלכם!
                     </p>
                     <button id="startGameBtn" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 hover:from-pink-400 hover:to-indigo-500 active:scale-95 transition-all font-black text-base sm:text-lg text-white shadow-xl shadow-pink-500/30 border border-white/30 cursor-pointer flex items-center justify-center gap-2">
                         <span>▶️</span>
-                        <span>התחל משחק</span>
+                        <span>התחלת משחק</span>
                     </button>
                 </div>
             </div>
 
             <!-- הודעה צפה במשחק -->
             <div id="toastBanner" class="absolute top-3 left-1/2 -translate-x-1/2 glass-panel text-white px-4 py-1.5 rounded-full text-[11px] sm:text-sm font-semibold opacity-0 transition-opacity duration-300 pointer-events-none whitespace-nowrap max-w-[92%] truncate">
-                ברוכים הבאים לקניון היצירה!
+                ברוכים וברוכות הבאים להרפתקה יצירתית בקניון!
             </div>
 
             <!-- כפתור פעילות מיוחדת בתוך החדרים (מופיע רק כשנמצאים בחדר ליד עמדת היצירה) -->
             <button id="roomActivityBtn" class="hidden activity-pulse absolute bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 text-white font-black px-5 py-2.5 rounded-full text-xs sm:text-sm shadow-xl border-2 border-white/60 flex items-center gap-2 z-10 cursor-pointer">
                 <span id="activityBtnIcon">🎨</span>
-                <span id="activityBtnText">בצע פעילות יצירה!</span>
+                <span id="activityBtnText">הפעלת אתגר יצירה!</span>
             </button>
 
             <!-- חלונית פעילות אינטראקטיבית בחדר (Mini-Game Modal) -->
@@ -160,7 +160,7 @@
                         <h2 id="activityTitle" class="text-base sm:text-lg font-black text-pink-200">פעילות בחדר</h2>
                         <button id="closeActivityBtn" class="bg-white/10 hover:bg-white/20 w-7 h-7 rounded-full flex items-center justify-center font-bold cursor-pointer">✕</button>
                     </div>
-                    <p id="activityDesc" class="text-xs sm:text-sm text-slate-200 mb-3">השלם את האתגר כדי לזכות באוצר!</p>
+                    <p id="activityDesc" class="text-xs sm:text-sm text-slate-200 mb-3">משלימים את האתגר כדי לזכות באוצר!</p>
                     
                     <!-- מד התקדמות לפעילות -->
                     <div class="w-full h-3.5 bg-slate-800 rounded-full overflow-hidden border border-white/15 mb-3 p-0.5">
@@ -186,7 +186,7 @@
                         <!-- הפריטים שנאספו יופיעו כאן -->
                     </div>
                     <div class="mt-3 pt-2.5 border-t border-white/15 flex items-center justify-between text-[11px] sm:text-xs text-slate-300">
-                        <span>היכנס לחדרים לפריטים נדירים!</span>
+                        <span>נכנסים לחדרים לפריטים נדירים!</span>
                         <span id="totalItemsText" class="font-bold text-cyan-300">סה"כ: 0 פריטים</span>
                     </div>
                 </div>
@@ -210,7 +210,7 @@
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-1">בחר סגנון עיצוב פנים:</label>
+                            <label class="block text-xs font-bold text-slate-300 mb-1">בחירת סגנון עיצוב פנים:</label>
                             <select id="newRoomTheme" class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-pink-400">
                                 <option value="slime_squishy">🫧 עולם הסקווישים, הקליי והסליים (טורקיז-ורוד)</option>
                                 <option value="yarn">🧶 סטודיו חרוזים וצמר (ורוד-סגול)</option>
@@ -252,10 +252,10 @@
                         🌟
                     </div>
                     <h2 id="stageCompleteTitle" class="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-l from-cyan-300 via-pink-200 to-amber-300 mb-2">
-                        סיימת את שלב 1!
+                        השלמתם את שלב 1!
                     </h2>
                     <p id="stageCompleteDesc" class="text-xs sm:text-sm text-slate-200 mb-4 leading-relaxed">
-                        ביקרת בכל החנויות ואספת אוצרות יצירה מדהימים! מוכן לעלות לקומה הבאה עם חדרים ואוצרות חדשים?
+                        ביקרתם בכל החנויות ואספתם אוצרות יצירה מדהימים! מוכנים לעלות לקומה הבאה עם חדרים ואוצרות חדשים?
                     </p>
                     <div class="bg-slate-900/70 rounded-2xl p-3 mb-5 border border-white/10 flex justify-around text-xs sm:text-sm">
                         <div>
@@ -269,7 +269,7 @@
                     </div>
                     <button id="nextStageBtn" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 active:scale-95 transition-all font-black text-base text-white shadow-xl border border-white/30 cursor-pointer flex items-center justify-center gap-2">
                         <span>🚀</span>
-                        <span id="nextStageBtnText">עבור לשלב 2</span>
+                        <span id="nextStageBtnText">מעבר לשלב 2</span>
                     </button>
                 </div>
             </div>
@@ -281,10 +281,10 @@
                         🏆
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-l from-amber-200 via-pink-200 to-cyan-200 mb-2">
-                        ניצחון! סיימת את המשחק!
+                        ניצחון! סיימתם את המשחק!
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-200 mb-4 leading-relaxed">
-                        השלמת בהצלחה את כל 3 השלבים בקניון היצירה ואספת את כל האוצרות הנדירים!
+                        השלמתם בהצלחה את כל 3 השלבים בהרפתקה יצירתית בקניון ואספתם את כל האוצרות הנדירים!
                     </p>
                     <div class="bg-slate-900/80 rounded-2xl p-3.5 mb-5 border border-amber-400/30 flex justify-around text-xs sm:text-sm">
                         <div>
@@ -298,7 +298,7 @@
                     </div>
                     <button id="restartGameBtn" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 active:scale-95 transition-all font-black text-base text-slate-950 shadow-xl border border-white/30 cursor-pointer flex items-center justify-center gap-2">
                         <span>🔄</span>
-                        <span>שחק שוב מהתחלה</span>
+                        <span>משחק חדש מהתחלה</span>
                     </button>
                 </div>
             </div>
@@ -416,7 +416,7 @@
                             ],
                             activity: {
                                 title: "תפיסת חרוזים וצמר",
-                                btnText: "אסוף חרוזים בסלסלה!",
+                                btnText: "איסוף חרוזים בסלסלה!",
                                 emoji: "🧶", rewardEmoji: "👑", rewardLabel: "כתר צמר מלכותי", rewardPoints: 50
                             }
                         },
@@ -433,7 +433,7 @@
                             ],
                             activity: {
                                 title: "ציד סקווישים וסליים!",
-                                btnText: "מעך סקווישים וסליים!",
+                                btnText: "מעיכת סקווישים וסליים!",
                                 emoji: "🫧", rewardEmoji: "🫧", rewardLabel: "מגה סליים גלקסיה", rewardPoints: 65,
                                 isSquishChallenge: true
                             }
@@ -451,7 +451,7 @@
                             ],
                             activity: {
                                 title: "רצף צבעי הקסם",
-                                btnText: "שחזר את רצף היצירה!",
+                                btnText: "שחזור רצף היצירה!",
                                 emoji: "🪄", rewardEmoji: "🦄", rewardLabel: "חד-קרן פרווה נדיר", rewardPoints: 60
                             }
                         }
@@ -475,7 +475,7 @@
                             ],
                             activity: {
                                 title: "תפיסת קינוחים נופלים",
-                                btnText: "תפוס קינוחים בסלסלה!",
+                                btnText: "תפיסת קינוחים בסלסלה!",
                                 emoji: "🍨", rewardEmoji: "🎂", rewardLabel: "עוגת קסם מוזהבת", rewardPoints: 70
                             }
                         },
@@ -492,7 +492,7 @@
                             ],
                             activity: {
                                 title: "ליטוש קריסטל מדויק",
-                                btnText: "לטש את הקריסטל בזמן!",
+                                btnText: "ליטוש הקריסטל בזמן!",
                                 emoji: "💎", rewardEmoji: "💎", rewardLabel: "יהלום הכתר המלכותי", rewardPoints: 80
                             }
                         },
@@ -509,7 +509,7 @@
                             ],
                             activity: {
                                 title: "זיכרון קיפולי אוריגמי",
-                                btnText: "שחזר את קיפולי הנייר!",
+                                btnText: "שחזור קיפולי הנייר!",
                                 emoji: "🦢", rewardEmoji: "🐉", rewardLabel: "דרקון אוריגמי מוזהב", rewardPoints: 85
                             }
                         }
@@ -533,7 +533,7 @@
                             ],
                             activity: {
                                 title: "איסוף פרחי קסם",
-                                btnText: "אסוף פרחים נופלים!",
+                                btnText: "איסוף פרחים נופלים!",
                                 emoji: "🌸", rewardEmoji: "💐", rewardLabel: "זר הקיסרית המנצנץ", rewardPoints: 90
                             }
                         },
@@ -550,7 +550,7 @@
                             ],
                             activity: {
                                 title: "מעיכת סקווישי חלל!",
-                                btnText: "מעך סקווישים קוסמיים!",
+                                btnText: "מעיכת סקווישים קוסמיים!",
                                 emoji: "🪐", rewardEmoji: "🪐", rewardLabel: "כוכב הסליים הנצחי", rewardPoints: 100,
                                 isSquishChallenge: true
                             }
@@ -562,14 +562,14 @@
                             decorColors: ["#fde047", "#f59e0b", "#f472b6", "#38bdf8"],
                             roomItems: [
                                 { emoji: "🏆", label: "גביע האלופים" },
-                                { emoji: "👑", label: "כתר קניון היצירה" },
+                                { emoji: "👑", label: "כתר היצירה" },
                                 { emoji: "💍", label: "טבעת האור" },
                                 { emoji: "🗝️", label: "מפתח הזהב" }
                             ],
                             activity: {
                                 title: "פתיחת כספת האוצר!",
-                                btnText: "פצח את מנעול הזהב!",
-                                emoji: "🏆", rewardEmoji: "🏆", rewardLabel: "גביע העל של קניון היצירה", rewardPoints: 150
+                                btnText: "פיצוח מנעול הזהב!",
+                                emoji: "🏆", rewardEmoji: "🏆", rewardLabel: "גביע העל של הקניון", rewardPoints: 150
                             }
                         }
                     ]
@@ -594,7 +594,7 @@
                     ],
                     activity: {
                         title: "ליטוש קריסטל סודי",
-                        btnText: "לטש את הקריסטל הסודי!",
+                        btnText: "ליטוש הקריסטל הסודי!",
                         emoji: "💎", rewardEmoji: "💎", rewardLabel: "לב הקריסטל הסודי", rewardPoints: 95
                     }
                 },
@@ -612,7 +612,7 @@
                     ],
                     activity: {
                         title: "זיכרון כוכבי החלל",
-                        btnText: "שחזר את מפת הכוכבים!",
+                        btnText: "שחזור מפת הכוכבים!",
                         emoji: "🚀", rewardEmoji: "🛸", rewardLabel: "חללית הפלא", rewardPoints: 95
                     }
                 }
@@ -725,7 +725,7 @@
                 const items = Object.values(gameState.inventory);
 
                 if (items.length === 0) {
-                    grid.innerHTML = `<div class="col-span-3 py-8 text-center text-slate-400 text-xs sm:text-sm">המחסן עדיין ריק! קפוץ לאסוף פריטים או היכנס לחדרים 🎒</div>`;
+                    grid.innerHTML = `<div class="col-span-3 py-8 text-center text-slate-400 text-xs sm:text-sm">המחסן עדיין ריק! קופצים לאסוף פריטים או נכנסים לחדרים 🎒</div>`;
                     totalText.textContent = `סה"כ: 0 פריטים`;
                     return;
                 }
@@ -795,7 +795,7 @@
                     const isLocked = gameState.nearbyStore.storeIdx > gameState.currentStageIndex;
                     btnDoor.classList.toggle('opacity-65', isLocked);
                     doorIcon.textContent = isLocked ? "🔒" : "🚪";
-                    doorText.textContent = isLocked ? "נעול" : "היכנס!";
+                    doorText.textContent = isLocked ? "נעול" : "כניסה!";
                 } else {
                     btnDoor.classList.add('opacity-65');
                     doorIcon.textContent = "🚪";
@@ -808,7 +808,7 @@
              */
             function toggleStoreDoor() {
                 if (!gameState.started) {
-                    showToast("לחץ על 'התחל משחק' כדי להתחיל! ▶️");
+                    showToast("לוחצים על 'התחלת משחק' כדי להתחיל! ▶️");
                     return;
                 }
 
@@ -820,7 +820,7 @@
                     gameState.insideStoreIdx = null;
                     gameState.doorTransition = 1;
                     roomActivityBtn.classList.add('hidden');
-                    locationSubtitle.textContent = `${levelsConfig[gameState.currentLevel - 1]?.title || 'מסדרון ראשי'} • התקרב לדלת הבאה`;
+                    locationSubtitle.textContent = `${levelsConfig[gameState.currentLevel - 1]?.title || 'מסדרון ראשי'} • מתקרבים לדלת הבאה`;
 
                     if (finishedIdx !== null && finishedIdx === gameState.currentStageIndex) {
                         gameState.visitedStores[finishedIdx] = true;
@@ -834,7 +834,7 @@
                             showToast(`החנות הבאה נפתחה: ${stores[gameState.currentStageIndex].name} 🎯`);
                         }
                     } else {
-                        showToast("יצאת חזרה למסדרון הקניון 🚶");
+                        showToast("יצאתם חזרה למסדרון הקניון 🚶");
                     }
 
                     updateDoorButtonUI();
@@ -851,7 +851,7 @@
                 if (gameState.nearbyStore) {
                     const { store, storeIdx } = gameState.nearbyStore;
                     if (storeIdx > gameState.currentStageIndex) {
-                        showToast(`החנות נעולה! עליך לבקר קודם ב-${stores[gameState.currentStageIndex].name} 🔒`);
+                        showToast(`החנות נעולה! יש לבקר קודם ב-${stores[gameState.currentStageIndex].name} 🔒`);
                         return;
                     }
                     const alreadyVisited = Boolean(gameState.visitedStores[storeIdx]);
@@ -859,7 +859,7 @@
                     return;
                 }
 
-                showToast("התקרב לדלת של חנות או לפורטל סודי כדי להיכנס! 🚪");
+                showToast("מתקרבים לדלת של חנות או לפורטל סודי כדי להיכנס! 🚪");
             }
 
             function enterRoom(store, storeIdx, alreadyVisited) {
@@ -878,7 +878,7 @@
                 if (alreadyVisited) {
                     gameState.interiorItems = [];
                     roomActivityBtn.classList.add('hidden');
-                    showToast("כבר אספת את הפריטים בחדר הזה ✅");
+                    showToast("הפריטים בחדר הזה כבר נאספו ✅");
                 } else {
                     const w = canvas.width || 600;
                     const diff = difficulties[gameState.difficultyIdx];
@@ -902,7 +902,7 @@
                     document.getElementById('activityBtnIcon').textContent = store.activity.emoji;
                     document.getElementById('activityBtnText').textContent = store.activity.btnText;
                     roomActivityBtn.classList.remove('hidden');
-                    showToast(`נכנסת אל ${store.name}! אסוף פריטים והפעל את האתגר ✨`);
+                    showToast(`נכנסתם אל ${store.name}! אוספים פריטים ומפעילים את האתגר ✨`);
                 }
 
                 updateDoorButtonUI();
@@ -916,10 +916,10 @@
                 const totalItemsCount = Object.values(gameState.inventory).reduce((sum, item) => sum + item.count, 0);
 
                 if (gameState.currentLevel < 3) {
-                    document.getElementById('stageCompleteTitle').textContent = `סיימת את שלב ${gameState.currentLevel}!`;
+                    document.getElementById('stageCompleteTitle').textContent = `השלמתם את שלב ${gameState.currentLevel}!`;
                     document.getElementById('stageScoreSummary').textContent = gameState.score;
                     document.getElementById('stageItemsSummary').textContent = totalItemsCount;
-                    document.getElementById('nextStageBtnText').textContent = `עבור לשלב ${gameState.currentLevel + 1}`;
+                    document.getElementById('nextStageBtnText').textContent = `מעבר לשלב ${gameState.currentLevel + 1}`;
                     document.getElementById('stageCompleteModal').classList.remove('hidden');
                 } else {
                     document.getElementById('finalScoreText').textContent = gameState.score;
@@ -941,11 +941,11 @@
                 spawnCollectiblesAround(120);
 
                 levelBadge.textContent = `שלב ${gameState.currentLevel}/3`;
-                locationSubtitle.textContent = `${nextCfg.title} • התקרב לדלת הראשונה`;
+                locationSubtitle.textContent = `${nextCfg.title} • מתקרבים לדלת הראשונה`;
                 document.getElementById('stageCompleteModal').classList.add('hidden');
                 renderChronologicalBar();
                 updateDoorButtonUI();
-                showToast(`ברוך הבא אל ${nextCfg.title}! 🚀`);
+                showToast(`ברוכים וברוכות הבאים אל ${nextCfg.title}! 🚀`);
             }
 
             function restartFullGame() {
@@ -966,7 +966,7 @@
                 scoreDisplay.textContent = "000";
                 levelBadge.textContent = "שלב 1/3";
                 document.getElementById('invCountBadge').textContent = "0";
-                locationSubtitle.textContent = `${levelsConfig[0].title} • התקרב לדלת הראשונה`;
+                locationSubtitle.textContent = `${levelsConfig[0].title} • מתקרבים לדלת הראשונה`;
                 document.getElementById('gameWinModal').classList.add('hidden');
                 renderChronologicalBar();
                 updateDoorButtonUI();
@@ -1084,7 +1084,7 @@
                 setTimeout(() => {
                     activityModal.classList.add('hidden');
                     roomActivityBtn.classList.add('hidden');
-                    showToast(customMsg || `כל הכבוד! זכית ב-${act.rewardLabel} (+${earned} נק') 🎉`);
+                    showToast(customMsg || `כל הכבוד! זכיתם ב-${act.rewardLabel} (+${earned} נק') 🎉`);
                 }, 250);
             }
 
@@ -1099,7 +1099,7 @@
             function openRoomActivity() {
                 if (!gameState.insideStore) return;
                 if (gameState.activityCompleted) {
-                    showToast("כבר השלמת את האתגר בחדר הזה! נסה חדר נוסף ✨");
+                    showToast("האתגר בחדר הזה כבר הושלם! מנסים חדר נוסף ✨");
                     return;
                 }
 
@@ -1116,7 +1116,7 @@
 
                 // 1. מיני-משחק: ציד סקווישים וסליים קופצים מתוך צנצנות (Whack-a-Squishy)
                 if (mode === 'whack') {
-                    document.getElementById('activityDesc').textContent = "לחץ מהר על הסקווישים והסליים שקופצים! היזהר מפצצות 💣";
+                    document.getElementById('activityDesc').textContent = "לוחצים מהר על הסקווישים והסליים שקופצים! נזהרים מפצצות 💣";
                     let squished = 0;
                     const targetSquishes = gameState.difficultyIdx === 0 ? 6 : (gameState.difficultyIdx === 1 ? 8 : 11);
                     const holes = Array(6).fill(null);
@@ -1171,7 +1171,7 @@
                             document.getElementById('whackStatus').textContent = `נמעכו: ${squished} / ${targetSquishes}`;
 
                             if (squished >= targetSquishes) {
-                                completeRoomMiniGame(squished * 4, `מדהים! מעכת ${squished} סקווישים וסליים 🫧🎉`);
+                                completeRoomMiniGame(squished * 4, `מדהים! מעכתם ${squished} סקווישים וסליים 🫧🎉`);
                             }
                         });
                     });
@@ -1181,7 +1181,7 @@
 
                 // 2. מיני-משחק: תפיסת פריטים נופלים בסלסלה (Catch Game)
                 else if (mode === 'catch') {
-                    document.getElementById('activityDesc').textContent = "הזז את הסלסלה ימינה ושמאלה כדי לתפוס את חומרי היצירה!";
+                    document.getElementById('activityDesc').textContent = "מזיזים את הסלסלה ימינה ושמאלה כדי לתפוס את חומרי היצירה!";
                     let caught = 0;
                     const targetCatch = gameState.difficultyIdx === 0 ? 5 : (gameState.difficultyIdx === 1 ? 7 : 9);
                     let basketX = 50; // באחוזים 10..90
@@ -1274,7 +1274,7 @@
 
                 // 3. מיני-משחק: עצירת סמן באזור הזהב המדויק (Timing Precision)
                 else if (mode === 'timing') {
-                    document.getElementById('activityDesc').textContent = "עצור את הסמן בדיוק בתוך האזור המוזהב הזוהר!";
+                    document.getElementById('activityDesc').textContent = "עוצרים את הסמן בדיוק בתוך האזור המוזהב הזוהר!";
                     let hits = 0;
                     const targetHits = gameState.difficultyIdx === 0 ? 2 : 3;
                     let pos = 0;
@@ -1291,7 +1291,7 @@
                             <div id="timingStatus" class="text-xs font-bold text-amber-300 mt-2">פגיעות מדויקות: 0 / ${targetHits}</div>
                         </div>
                         <button id="timingStopBtn" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-cyan-500 to-indigo-600 active:scale-95 font-black text-base shadow-lg border border-white/30 cursor-pointer">
-                            🎯 עצור עכשיו!
+                            🎯 עצירה עכשיו!
                         </button>
                     `;
 
@@ -1322,7 +1322,7 @@
                             }
                         } else {
                             playJumpSound();
-                            document.getElementById('timingStatus').textContent = "פספסת קצת! נסה לעצור בתוך הזהב 🎯";
+                            document.getElementById('timingStatus').textContent = "פספוס קטן! מנסים לעצור בתוך הזהב 🎯";
                         }
                     });
 
@@ -1331,7 +1331,7 @@
 
                 // 4. מיני-משחק: זיכרון וחזרה על רצף אייקונים מנצנצים (Memory Sequence)
                 else {
-                    document.getElementById('activityDesc').textContent = "צפה ברצף המנצנץ וחזור על הסדר הנכון!";
+                    document.getElementById('activityDesc').textContent = "צופים ברצף המנצנץ וחוזרים על הסדר הנכון!";
                     const padIcons = store.roomItems.slice(0, 4).map(i => i.emoji);
                     const seqLen = gameState.difficultyIdx === 0 ? 3 : (gameState.difficultyIdx === 1 ? 4 : 5);
                     const sequence = Array.from({ length: seqLen }, () => Math.floor(Math.random() * 4));
@@ -1339,7 +1339,7 @@
                     let isShowing = true;
 
                     container.innerHTML = `
-                        <div id="memoryHint" class="text-xs font-bold text-amber-300 mb-2">👀 צפה ברצף...</div>
+                        <div id="memoryHint" class="text-xs font-bold text-amber-300 mb-2">👀 צופים ברצף...</div>
                         <div class="grid grid-cols-2 gap-2.5 my-2">
                             ${padIcons.map((ico, idx) => `
                                 <button data-pad="${idx}" class="mem-pad h-16 rounded-2xl bg-slate-900/90 border-2 border-purple-400/30 text-3xl flex items-center justify-center transition-all cursor-pointer">
@@ -1355,7 +1355,7 @@
                     const playSequence = () => {
                         isShowing = true;
                         userStep = 0;
-                        hintEl.textContent = "👀 צפה ברצף...";
+                        hintEl.textContent = "👀 צופים ברצף...";
                         sequence.forEach((padIdx, i) => {
                             setTimeout(() => {
                                 pads[padIdx].classList.add('bg-pink-500/60', 'border-amber-300', 'scale-105');
@@ -1364,7 +1364,7 @@
                                     pads[padIdx].classList.remove('bg-pink-500/60', 'border-amber-300', 'scale-105');
                                     if (i === sequence.length - 1) {
                                         isShowing = false;
-                                        hintEl.textContent = "👉 תורך! לחץ לפי הסדר";
+                                        hintEl.textContent = "👉 תורכם! לוחצים לפי הסדר";
                                     }
                                 }, 360);
                             }, (i + 1) * 620);
@@ -1387,7 +1387,7 @@
                                     completeRoomMiniGame(15);
                                 }
                             } else {
-                                hintEl.textContent = "❌ טעות בסדר! צפה שוב ברצף...";
+                                hintEl.textContent = "❌ טעות בסדר! צופים שוב ברצף...";
                                 document.getElementById('activityProgressBar').style.width = "0%";
                                 setTimeout(playSequence, 700);
                             }
@@ -1610,7 +1610,7 @@
                     ctx.fillStyle = "#ffffff";
                     ctx.font = "900 10px Rubik, sans-serif";
                     ctx.textAlign = "center";
-                    ctx.fillText(isLocked ? "🔒 נעול" : (isVisited ? "✅ הושלם" : "🚪 היכנס!"), doorX + doorW / 2, doorY - 16);
+                    ctx.fillText(isLocked ? "🔒 נעול" : (isVisited ? "✅ הושלם" : "🚪 כניסה!"), doorX + doorW / 2, doorY - 16);
                 }
                 ctx.restore();
             }
@@ -1722,7 +1722,7 @@
                         playCollectSound();
                         addItemToInventory(item.emoji, item.label, earnedPoints);
                         addFloatingScore(item.x, itemY - 15, `+${earnedPoints}`, "#fde047");
-                        showToast(`אספת ${item.label} בחדר (+${earnedPoints} נק') ✨`);
+                        showToast(`אספתם ${item.label} בחדר (+${earnedPoints} נק') ✨`);
                     }
                 });
             }
@@ -1967,7 +1967,7 @@
                             gameState.score -= 5;
                             scoreDisplay.textContent = String(gameState.score).padStart(3, '0');
                             addFloatingScore(screenX, floorY - 35, "-5", "#f43f5e");
-                            showToast("קפוץ מעל המכשולים! (-5 נק') 🚧");
+                            showToast("קופצים מעל המכשולים! (-5 נק') 🚧");
                         }
                     }
                 });
@@ -2013,7 +2013,7 @@
                         playCollectSound();
                         addItemToInventory(item.emoji, item.label, earnedPoints);
                         addFloatingScore(screenX, itemY - 15, `+${earnedPoints}`, item.isSuperHigh ? "#f472b6" : (item.isHigh ? "#38bdf8" : "#fde047"));
-                        showToast(`${item.isSuperHigh ? 'קפיצת על! ' : (item.isHigh ? 'תפיסת קפיצה! ' : '')}אספת ${item.label} למחסן (+${earnedPoints})`);
+                        showToast(`${item.isSuperHigh ? 'קפיצת על! ' : (item.isHigh ? 'תפיסת קפיצה! ' : '')}אספתם ${item.label} למחסן (+${earnedPoints})`);
                     }
                 });
             }
@@ -2255,7 +2255,7 @@
                 gameState.autoWalk = false;
                 updateAutoWalkUI();
                 document.getElementById('startOverlay').classList.add('hidden');
-                showToast("המשחק התחיל! השלם את 3 השלבים בקניון היצירה ✨");
+                showToast("המשחק התחיל! משלימים את 3 השלבים בהרפתקה יצירתית בקניון ✨");
             });
 
             // כפתורי מעבר לשלב הבא ומשחק חדש בסיום 3 השלבים
@@ -2309,8 +2309,8 @@
                     ],
                     activity: {
                         title: rawActName || `פעילות ב-${roomName}`,
-                        desc: `לחץ במהירות כדי להשלים את היצירה ב-${roomName}!`,
-                        btnText: rawActName || "הפעל פעילות יצירה",
+                        desc: `משלימים במהירות את היצירה ב-${roomName}!`,
+                        btnText: rawActName || "הפעלת אתגר יצירה",
                         emoji: mainEmoji,
                         rewardEmoji: rewardEmoji,
                         rewardLabel: rewardLabel,
